@@ -27,14 +27,32 @@ class Pile:
         self.head = self.head.next
         return data
 
-    def busca(self, dado):
-        anterior = None
-        corrente = self.cabeca
-        while corrente and corrente.dado != dado:
-            anterior = corrente
-            corrente = corrente.proximo
-        if corrente is None:
+    def search(self, data):
+        previous = None
+        current = self.head
+        while current and current.data != data:
+            previous = current
+            current = current.next
+        if current is None:
             return None
-        return anterior, corrente
+        return previous, current
 
+    def get_value_index(self, index):
+        current = self.head
+        assert current, "Nao há elemento nessa lista"
+        if index == 0:
+            return current.data
+        else:
+            for i in range(index):
+                assert current, "Nao existe esse Index nessa lista "
+                current = current.next
+            return current.data
+
+    def size(self):
+        size = 0
+        current = self.head
+        while current:
+            size += 1
+            current = current.next
+        return size
 

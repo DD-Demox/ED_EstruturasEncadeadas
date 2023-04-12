@@ -39,12 +39,12 @@ class Pile:
 
     def get_value_index(self, index):
         current = self.head
-        assert current, "Nao há elemento nessa lista"
+        assert current, "Nao há elemento nessa pilha"
         if index == 0:
             return current.data
         else:
             for i in range(index):
-                assert current, "Nao existe esse Index nessa lista "
+                assert current, "Nao existe esse Index nessa pilha "
                 current = current.next
             return current.data
 

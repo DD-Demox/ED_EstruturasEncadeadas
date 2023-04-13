@@ -81,10 +81,7 @@ class ListaEncadeada:
         if busca[0] is None:
             self.cabeca = self.cabeca.proximo
         else:
-            if busca[1]:
-                busca[0].proximo = busca[1].proximo
-            else:
-                busca[0].proximo = None
+            busca[0].proximo = busca[1].proximo
 
     def get_value_index(self,index):
         current = self.cabeca

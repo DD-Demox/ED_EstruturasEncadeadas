@@ -62,6 +62,7 @@ class Queue:
             current= current.next
         return size
 
-
+    def empty_queue(self):
+        self.head = None
 
 

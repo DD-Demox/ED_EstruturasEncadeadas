@@ -17,8 +17,8 @@ class Pile:
     def __repr__(self):
         return "["+str(self.head)+"]"
 
-    def insert(self,value):
-        new_node = Node(value,self.head)
+    def insert(self, value):
+        new_node = Node(value, self.head)
         self.head = new_node
 
     def remove(self):

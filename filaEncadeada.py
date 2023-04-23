@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self,data=0,next_node=None):
+    def __init__(self, data=0, next_node=None):
         self.data = data
-        self.next:Node = next_node
+        self.next: Node = next_node
 
     def __repr__(self):
         if self.next is None:
@@ -12,7 +12,8 @@ class Node:
 
 class Queue:
     def __init__(self):
-        self.head:Node = None
+        self.head: Node = None
+        self.tail: Node = None
 
     def __repr__(self):
         return "["+str(self.head)+"]"
@@ -21,17 +22,15 @@ class Queue:
         if self.head is None:
             node = Node(data)
             self.head = node
+            self.tail = node
         else:
-            current = self.head
-            while True:
-                if current.next is None:
-                    break
-                else:
-                    current = current.next
+            tail = self.tail
             node = Node(data)
-            current.next = node
+            self.tail.next = node
+            self.tail = node
 
     def pop(self):
+        assert self.head, "Nao pode remover de uma fila vazia"
         data = self.head.data
         self.head = self.head.next
         return data
@@ -58,7 +57,7 @@ class Queue:
         size = 0
         current = self.head
         while current:
-            size+=1
+            size += 1
             current= current.next
         return size
 

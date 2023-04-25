@@ -32,7 +32,11 @@ class Queue:
     def pop(self):
         assert self.head, "Nao pode remover de uma fila vazia"
         data = self.head.data
+        current = self.head
         self.head = self.head.next
+        if self.head is None:
+            self.tail = None
+        current.next = None
         return data
 
     def search(self, data):

@@ -24,7 +24,9 @@ class Pile:
     def remove(self):
         assert self.head, "Nao pode remover de uma pilha vazia"
         data = self.head.data
+        current = self.head
         self.head = self.head.next
+        current.next = None
         return data
 
     def search(self, data):

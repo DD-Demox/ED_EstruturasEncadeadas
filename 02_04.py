@@ -20,7 +20,7 @@ while True:
                 if i == rua.size()-1:
                     print(rua.get_value_index(i))
                 else:
-                    print(str(rua.get_value_index(i))+"->",end="")
+                    print(str(rua.get_value_index(i))+"->", end="")
     elif inpt == "3":
         try:
             car_plate = int(input("Digite a placa do carro"))
@@ -28,13 +28,12 @@ while True:
                 index_car = rua.get_index_value(car_plate)
                 for i in range(index_car+1):
                     if i == index_car:
-                        print(rua.get_index_value(i))
+                        print(rua.get_value_index(i))
                     else:
-                        print(str(rua.get_value_index(i))+"->",end="")
+                        print(str(rua.get_value_index(i))+"->", end="")
         except AssertionError:
             print("Carro nao esta na rua")
-    elif inpt=="4":
+    elif inpt == "4":
         break
     else:
         print("Opçao invalida")
-

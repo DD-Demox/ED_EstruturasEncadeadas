@@ -1,7 +1,7 @@
 from pilhaEncadeada import Pile
 
 
-def largest_element_pile(pile:Pile):
+def largest_element_pile(pile: Pile):
     current = pile.head
     largest_element = current.data
     current = current.next

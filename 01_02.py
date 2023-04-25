@@ -1,6 +1,7 @@
 from listaEncadeada import ListaEncadeada
 
-def remove_duplicatas(lista:ListaEncadeada):
+
+def remove_duplicatas(lista: ListaEncadeada):
     corrente = lista.cabeca
     while corrente:
         proximo_nodo = corrente.proximo
@@ -9,6 +10,7 @@ def remove_duplicatas(lista:ListaEncadeada):
         corrente.proximo = proximo_nodo
         corrente = proximo_nodo
     return lista
+
 
 lista = ListaEncadeada()
 lista.append(0)

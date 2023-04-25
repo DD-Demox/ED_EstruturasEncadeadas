@@ -83,7 +83,7 @@ class ListaEncadeada:
         else:
             busca[0].proximo = busca[1].proximo
 
-    def get_value_index(self,index):
+    def get_value_index(self, index):
         current = self.cabeca
         assert current, "Nao há elemento nessa lista"
         if index == 0:
@@ -98,9 +98,6 @@ class ListaEncadeada:
         size = 0
         current = self.cabeca
         while current:
-            size +=1
+            size += 1
             current = current.proximo
         return size
-
-
-

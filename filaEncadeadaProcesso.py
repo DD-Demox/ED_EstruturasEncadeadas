@@ -68,7 +68,7 @@ class Queue:
     def empty_queue(self):
         self.head = None
 
-    def remove_with_search(self,id_processo):
+    def remove_with_search(self, id_processo):
         assert self.head, "Nao pode remover se file vazia"
         search = self.search(id_processo)
         if search[0] is None:
@@ -84,8 +84,3 @@ class Queue:
                 node_to_kill = current
             current = current.next
         self.remove_with_search(node_to_kill.id)
-
-
-
-
-

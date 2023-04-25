@@ -36,7 +36,7 @@ class Pile:
         while current and current.data != data:
             previous = current
             current = current.next
-            index +=1
+            index += 1
         if current is None:
             return None
         return previous, current, index
@@ -63,7 +63,7 @@ class Pile:
     def is_element_in_pile(self, element):
         current = self.head
         assert current, "Nao há elemento nessa pilha"
-        if self.search(element) != None:
+        if self.search(element) is not None:
             return True
         else:
             return False
@@ -73,6 +73,3 @@ class Pile:
         assert node, f"{value} nao esta na pilha"
 
         return node[2]
-
-
-

@@ -15,10 +15,9 @@ def t_pilha(array: list):
     return pile
 
 
-numbers_array =[random.randint(1, 100) for i in range(15)]
+numbers_array = [random.randint(1, 100) for i in range(15)]
 print(numbers_array)
-pile = t_pilha(numbers_array)
-print(pile)
-for i in range(pile.size()):
-    print(pile.remove())
-
+pilha = t_pilha(numbers_array)
+print(pilha)
+for i in range(pilha.size()):
+    print(pilha.remove())

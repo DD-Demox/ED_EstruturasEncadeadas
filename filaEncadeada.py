@@ -24,7 +24,6 @@ class Queue:
             self.head = node
             self.tail = node
         else:
-            tail = self.tail
             node = Node(data)
             self.tail.next = node
             self.tail = node
@@ -62,10 +61,8 @@ class Queue:
         current = self.head
         while current:
             size += 1
-            current= current.next
+            current = current.next
         return size
 
     def empty_queue(self):
         self.head = None
-
-

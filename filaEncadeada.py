@@ -32,6 +32,8 @@ class Queue:
         assert self.head, "Nao pode remover de uma fila vazia"
         data = self.head.data
         self.head = self.head.next
+        if self.head is None:
+            self.tail = None
         return data
 
     def search(self, data):
